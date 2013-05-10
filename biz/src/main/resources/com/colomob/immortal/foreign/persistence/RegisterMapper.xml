@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.colomob.immortal.foreign.persistence.RegisterMapper">
+
+	<cache />
+
+	<insert id="insert" parameterType="RegisterEntity">
+		<selectKey resultType="Long" order="AFTER" keyProperty="id">  
+			select last_insert_id() as id  
+		</selectKey>
+		insert into register (
+			cst_create,
+			cst_modified,
+			userid,
+			username,
+			udid,
+			guest_id,
+			channel_account_id,
+			reg_channel,
+			email,
+			mobile,
+			reg_client_type,
+			register_type,
+			account_type,
+			status
+		) values (
+			now(),
+			now(),
+			#{userid},
+			#{username},
+			#{udid},
+			#{guestId},
+			#{channelAccountId},
+			#{regChannel},
+			#{email},
+			#{mobile},
+			#{regClientType},
+			#{registerType},
+			#{accountType},
+			#{status}
+		)
+	</insert>
+
+</mapper>
