@@ -16,6 +16,11 @@
 			<groupId>com.colomob.immortal.foreign.app</groupId>
 			<artifactId>foreign.common</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.colomob.shared</groupId>
+			<artifactId>biz.immortal.analysis</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>

@@ -18,7 +18,6 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.colomob.immortal.foreign.model.RegisterEntity;
-import com.colomob.immortal.foreign.service.RegisterService;
 
 /**
  * @author baowp
